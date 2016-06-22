@@ -19,4 +19,4 @@ var_dump($CompaniesHouse->company_profile('10131005'));`
 To access the wiki or see more examples access our [Companies House PHP API wiki](https://github.com/GRITnet/Companies-House-PHP-API/wiki)
 
 #Copyright
-This Companies House PHP API wrapper is released by @GRITnet under a GNU General Public License
+This Companies House PHP API wrapper is released by [@GRITnet](https://github.com/GRITnet) under a GNU General Public License
