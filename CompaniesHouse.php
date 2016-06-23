@@ -1,11 +1,26 @@
 <?php
 
+	/**
+	* Companies House PHP API
+	*
+	* This Companies House PHP API wrapper lets you get informations about companies,
+	* officers, fillings and everything else that the Companies House makes public for
+	* everyone to see.
+	*
+	* @link      	https://github.com/GRITnet/Companies-House-PHP-API
+	* @wiki			https://github.com/GRITnet/Companies-House-PHP-API/wiki
+	* @author		George Dobre (george.dobre@gritnet.uk)
+	* @copyright 	Copyright (c) 2016 GRITNET LIMITED (http://gritnet.uk)
+	* @license   	https://www.gnu.org/licenses/gpl.html
+	* @since     	File available since Release 1.0.0
+	*/
+	
 	class CompaniesHouse
 	{
 		private $_ApiKey 	= 	'YOUR_COMPANIES_HOUSE_API_KEY';
 		private $_Endpoint 	= 	'https://api.companieshouse.gov.uk';
 		
-		/*
+		/**
 		* Search
 		*
 		* Query parameters:
@@ -32,14 +47,13 @@
 				$query_string = '/' . $type . '?q=' . $query . '&' . $query_string;
 			}
 			
-			print_r($query_string);
-			echo '<hr/>';
 			$request = curl_init();
 			curl_setopt($request, CURLOPT_URL, $this->_Endpoint . '/search' . $query_string);
 			curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
@@ -51,7 +65,7 @@
 			}
 		}
 		
-		/* 
+		/** 
 		* Get the basic company information
 		*
 		* Query parameters: 
@@ -66,6 +80,7 @@
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
@@ -77,7 +92,7 @@
 			}
 		}
 		
-		/* 
+		/** 
 		* Get the current address of a company
 		*
 		* Query parameters: 
@@ -92,6 +107,7 @@
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
@@ -103,7 +119,7 @@
 			}
 		}
 		
-		/* 
+		/** 
 		* List the company officers
 		*
 		* Query parameters: 
@@ -134,6 +150,7 @@
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
@@ -145,7 +162,7 @@
 			}
 		}
 		
-		/* 
+		/** 
 		* Get a specific filling transaction of a company
 		*
 		* Query parameters: 
@@ -172,6 +189,7 @@
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
@@ -183,7 +201,7 @@
 			}
 		}
 		
-		/* 
+		/** 
 		* Get company insolvency information
 		*
 		* Query parameters: 
@@ -200,6 +218,7 @@
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
@@ -211,7 +230,7 @@
 			}
 		}
 		
-		/* 
+		/** 
 		* Company charges information/individual charge information
 		*
 		* Query parameters: 
@@ -238,6 +257,7 @@
 			curl_setopt($request, CURLOPT_USERPWD, $this->_ApiKey . ':');
 			$result = curl_exec($request);
 			$status = intval(curl_getinfo($request, CURLINFO_HTTP_CODE));
+			curl_close($request);
 			
 			if($status==200)
 			{
