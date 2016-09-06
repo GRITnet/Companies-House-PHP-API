@@ -8,8 +8,8 @@
 	* everyone to see.
 	*
 	* @link      	https://github.com/GRITnet/Companies-House-PHP-API
-	* @wiki			https://github.com/GRITnet/Companies-House-PHP-API/wiki
-	* @author		George Dobre (george.dobre@gritnet.uk)
+	* @wiki		https://github.com/GRITnet/Companies-House-PHP-API/wiki
+	* @author	George Dobre (george.dobre@gritnet.uk)
 	* @copyright 	Copyright (c) 2016 GRITNET LIMITED (http://gritnet.uk)
 	* @license   	https://www.gnu.org/licenses/gpl.html
 	* @since     	File available since Release 1.0.0
