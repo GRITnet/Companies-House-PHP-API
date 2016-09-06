@@ -15,7 +15,7 @@
 	* @since     	File available since Release 1.0.0
 	*/
 	
-	class CompaniesHouse
+	class Companies_House
 	{
 		private $_ApiKey 	= 	'YOUR_COMPANIES_HOUSE_API_KEY';
 		private $_Endpoint 	= 	'https://api.companieshouse.gov.uk';
